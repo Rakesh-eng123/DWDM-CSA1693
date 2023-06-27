@@ -1,0 +1,15 @@
+# Input data
+data <- c(1, 1, 5, 5, 5, 5, 5, 8, 8, 10, 10, 10, 10, 12, 14, 14, 14, 15, 15, 15, 15, 15, 15, 18, 18, 18, 18, 18, 18, 18, 18, 20, 20, 20, 20, 20, 20, 20, 21, 21, 21, 21, 25, 25, 25, 25, 25, 28, 28, 30, 30, 30)
+
+# Equal-frequency partitioning
+bin_count <- 3
+bins <- cut(data, breaks = bin_count, labels = FALSE)
+
+# Bin means
+bin_means <- tapply(data, bins, mean)
+
+# Bin boundaries
+bin_boundaries <- tapply(data, bins, range)
+
+# Plot histogram
+hist(data, breaks = bin_boundaries, main = "Histogram with Equal-frequency Partitioning", xlab = "Values", ylab = "Frequency", col = "lightblue")
