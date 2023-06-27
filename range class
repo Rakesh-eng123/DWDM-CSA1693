@@ -1,0 +1,55 @@
+# Input data
+classA <- c(76, 35, 47, 64, 95, 66, 89, 36, 84)
+classB <- c(51, 56, 84, 60, 59, 70, 63, 66, 50)
+
+# Calculate mean
+mean_A <- mean(classA)
+mean_B <- mean(classB)
+
+# Calculate median
+median_A <- median(classA)
+median_B <- median(classB)
+
+# Calculate range
+range_A <- range(classA)[2] - range(classA)[1]
+range_B <- range(classB)[2] - range(classB)[1]
+
+# Print results
+cat("Class A:\n")
+cat("Mean:", mean_A, "\n")
+cat("Median:", median_A, "\n")
+cat("Range:", range_A, "\n\n")
+
+cat("Class B:\n")
+cat("Mean:", mean_B, "\n")
+cat("Median:", median_B, "\n")
+cat("Range:", range_B, "\n")
+
+# Boxplot
+boxplot(classA, classB, names = c("Class A", "Class B"), main = "Comparison of Year 9 Class Performance", ylab = "Scores")
+
+# Inferences
+cat("\nInferences:\n")
+if (mean_A > mean_B) {
+  cat("Class A has a higher mean score.\n")
+} else if (mean_A < mean_B) {
+  cat("Class B has a higher mean score.\n")
+} else {
+  cat("Both classes have the same mean score.\n")
+}
+
+if (median_A > median_B) {
+  cat("Class A has a higher median score.\n")
+} else if (median_A < median_B) {
+  cat("Class B has a higher median score.\n")
+} else {
+  cat("Both classes have the same median score.\n")
+}
+
+if (range_A > range_B) {
+  cat("Class A has a larger score range.\n")
+} else if (range_A < range_B) {
+  cat("Class B has a larger score range.\n")
+} else {
+  cat("Both classes have the same score range.\n")
+}
