@@ -1,0 +1,50 @@
+# Decimal scaling normalization function
+decimal_scaling_norm <- function(x) {
+  power <- floor(log10(max(abs(x))))
+  x / 10^power
+}
+
+# Apply decimal scaling normalization to the age data
+age_decimal_scaling_norm <- decimal_scaling_norm(age)
+
+# Print the normalized values
+age_decimal_scaling_norm
+# Min-Max normalization function
+min_max_norm <- function(x) {
+  (x - min(x)) / (max(x) - min(x))
+}
+
+# Apply min-max normalization to the age data
+age_min_max_norm <- min_max_norm(age)
+
+# Print the normalized values
+age_min_max_norm
+# Z-Score normalization function
+z_score_norm <- function(x) {
+  (x - mean(x)) / sd(x)
+}
+
+# Apply z-score normalization to the age data
+age_z_score_norm <- z_score_norm(age)
+
+# Specify the standard deviation for age
+age_sd <- 12.94
+
+# Transform the value 35 using z-score normalization
+value_to_transform <- 35
+transformed_value_z_score <- (value_to_transform - mean(age)) / age_sd
+
+# Print the normalized values and transformed value
+age_z_score_norm
+transformed_value_z_score
+# Decimal scaling normalization function
+decimal_scaling_norm <- function(x) {
+  power <- floor(log10(max(abs(x))))
+  x / 10^power
+}
+
+# Apply decimal scaling normalization to the age data
+age_decimal_scaling_norm <- decimal_scaling_norm(age)
+
+# Print the normalized values
+age_decimal_scaling_norm
