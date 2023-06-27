@@ -1,0 +1,14 @@
+pencils <- c("Box9", "Box8", 9, "Box7", "Box6", "Box5", "Box4", "Box3", 12, "Box2", "Box1", 10, 8, 7, 6, 11, 23, 23, 25)
+# Mean
+mean_value <- mean(pencils)
+
+# Median
+median_value <- median(pencils)
+
+# Mode
+mode_value <- names(table(pencils))[table(pencils) == max(table(pencils))]
+
+# Print the mean, median, and mode
+mean_value
+median_value
+mode_value
